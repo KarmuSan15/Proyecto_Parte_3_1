@@ -1,0 +1,34 @@
+import { Canvas, Meta } from "@storybook/blocks"; // Importamos componentes de Storybook
+import Example from "./example.tsx"; // Importamos el componente Example
+import * as MyButton from "./mybutton.stories.tsx"; // Importamos las historias de MyButton
+
+<Meta of={MyButton} title="MyButton" /> // Definimos los metadatos del componente MyButton para Storybook, incluyendo el título
+
+# MyButton
+// Descripción del componente: Es un componente de botón con diferentes especializaciones.
+
+#### Example
+<Canvas of={MyButton.Default} /> {/* Muestra visualmente el ejemplo del botón por defecto en Storybook */}
+
+## Uso
+```ts
+import { MyButton } from 'milibreria'; // Importamos el componente MyButton desde la librería externa 'milibreria'
+
+function Example() {
+  return (
+    <MyButton
+      text="Hola" // Texto que aparecerá en el botón
+      txtcolor="white" // Color del texto del botón
+      bgcolor="blue" // Color de fondo del botón
+      borderColor="black" // Color del borde del botón
+      borderWidth="1px" // Grosor del borde del botón
+      size="medium" // Tamaño del botón (por ejemplo, mediano)
+      hoverTxtColor="yellow" // Color del texto cuando el ratón pasa sobre el botón (hover)
+      hoverBgColor="green" // Color de fondo cuando el ratón pasa sobre el botón (hover)
+      disabled={false} // Propiedad que indica si el botón está habilitado o deshabilitado (en este caso está habilitado)
+      onClick={() => alert("¡Hola!")} // Función que se ejecuta cuando se hace clic en el botón
+    />
+  );
+}
+
+export default Example; // Exportamos el componente Example para su uso
