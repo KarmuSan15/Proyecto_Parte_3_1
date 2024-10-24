@@ -1,2 +1,3 @@
 // src/components/myfavourite/index.ts
-export { default as MyFavourite } from './MyFavourite'; // Exportamos el componente MyFavourite
+ // Exportamos el componente MyFavourite
+export { default as MyFavourite } from './myFavourite';
