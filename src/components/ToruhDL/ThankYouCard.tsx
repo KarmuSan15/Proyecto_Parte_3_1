@@ -1,5 +1,3 @@
-// src/components/toruhdl/ThankYouCard.tsx
-
 import React from "react"; // Importa React
 import { Card, CardContent, Typography, Box, Button } from "@mui/material"; // Importa componentes de Material UI
 import { motion } from "framer-motion"; // Importa la biblioteca de animaciones Framer Motion

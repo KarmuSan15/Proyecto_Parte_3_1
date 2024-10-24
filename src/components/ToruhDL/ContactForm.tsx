@@ -1,5 +1,3 @@
-// src/components/toruhdl/ContactForm.tsx
-
 import React, { useState } from 'react'; // Importa React y el hook useState para manejar el estado
 import { TextField, Button, Typography, Card } from '@mui/material'; // Importa componentes de Material UI
 

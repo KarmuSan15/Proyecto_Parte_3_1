@@ -1,0 +1,27 @@
+import { Canvas, Meta } from "@storybook/blocks"; // Importamos componentes de Storybook
+import Example from "./example.tsx"; // Importamos el componente Example
+import * as MyFavouriteStories from "./MyFavourite.stories.tsx"; // Importamos las historias de MyFavourite
+
+<Meta of={MyFavouriteStories} title="MyFavourite" /> // Definimos los metadatos del componente MyFavourite para Storybook
+
+# MyFavourite
+// Descripción del componente: Es un componente que permite marcar elementos como favoritos mediante un ícono.
+
+#### Example
+<Canvas of={MyFavouriteStories.Default} /> {/* Muestra visualmente el ejemplo del ícono favorito por defecto en Storybook */}
+
+## Uso
+```tsx
+import { MyFavourite } from 'milibreria'; // Importamos el componente MyFavourite desde la librería externa 'milibreria'
+
+function Example() {
+  return (
+    <MyFavourite
+      color="red" // Color del ícono
+      disabled={false} // Propiedad que indica si el ícono está habilitado o deshabilitado (en este caso está habilitado)
+      onClick={() => alert("¡Icono clicado!")} // Función que se ejecuta cuando se hace clic en el ícono
+    />
+  );
+}
+
+export default Example; // Exportamos el componente Example para su uso

@@ -2,13 +2,14 @@
 import React from "react"; // Importamos React para poder crear componentes
 import IconButton from "@mui/material/IconButton"; // Importamos IconButton de MUI para el botón
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder"; // Importamos el icono de favorito con borde de MUI
+import { MouseEventHandler } from 'react'; // Importamos el tipo MouseEventHandler de React
 
-// Definimos las propiedades que aceptará el componente MyFavouriteBorder
-type MyFavouriteBorderProps = {
-  color: string; // Color del icono, requerido
-  disabled?: boolean; // Propiedad opcional para deshabilitar el botón
-  onClick?: () => void; // Propiedad opcional para manejar el evento de clic
-};
+// Declaro la interface del componente MyFavouriteBorder.
+export interface MyFavouriteBorderProps {
+  color: string; // Prop 'color' de tipo string: color del icono (requerido)
+  disabled?: boolean; // Prop 'disabled': indica si el botón está deshabilitado (opcional)
+  onClick?: MouseEventHandler<HTMLButtonElement>; // Prop 'onClick': función que se ejecuta al hacer clic (opcional)
+}
 
 // Definimos el componente MyFavouriteBorder utilizando las propiedades especificadas
 const MyFavouriteBorder: React.FC<MyFavouriteBorderProps> = ({ color, disabled = false, onClick }) => {

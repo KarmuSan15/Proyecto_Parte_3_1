@@ -1,5 +1,3 @@
-// src/components/toruhdl/ToruhDL.tsx
-
 import React, { useState } from "react"; // Importa React y el hook useState para manejar el estado
 import { Card, CardContent, Typography, Avatar, Button, Box } from "@mui/material"; // Importa componentes de Material UI
 import { GitHub, LinkedIn, Twitter } from "@mui/icons-material"; // Importa íconos de redes sociales
@@ -7,15 +5,12 @@ import { motion } from "framer-motion"; // Importa framer-motion para animacione
 import ContactForm from "./ContactForm"; // Importa el nuevo componente de formulario
 import ThankYouCard from "./ThankYouCard"; // Importa el componente de agradecimiento
 
-// Define las propiedades que acepta el componente
-interface ToruhDLProps {
+// Define y exporta las propiedades que acepta el componente
+export interface ToruhDLProps {
   name: string; // Nombre del usuario
   description: string; // Descripción del usuario
-  avatarUrl?: string; // URL del avatar (opcional)
+  avatarUrl: string; // URL del avatar (ya no es opcional)
 }
-
-// URL de un avatar por defecto
-const defaultAvatar = "https://i.pinimg.com/736x/88/e9/aa/88e9aa944c9bc14936d6e8cf7c954473.jpg"; 
 
 // Componente funcional ToruhDL que recibe props
 const ToruhDL: React.FC<ToruhDLProps> = ({ name, description, avatarUrl }) => {
@@ -62,7 +57,7 @@ const ToruhDL: React.FC<ToruhDLProps> = ({ name, description, avatarUrl }) => {
           <CardContent sx={{ textAlign: "center" }}> {/* Contenido centrado en la tarjeta */}
             <Avatar 
               alt={name} // Texto alternativo para el avatar
-              src={avatarUrl || defaultAvatar} // Usa el avatar proporcionado o el por defecto
+              src={avatarUrl} // Usa el avatar proporcionado
               sx={{ width: 100, height: 100, margin: "0 auto 16px auto" }} // Tamaño y márgenes del avatar
             />
             <Typography variant="h5" component="div" gutterBottom> {/* Título con el nombre */}
