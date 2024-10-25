@@ -1,31 +1,34 @@
 import { Canvas, Meta } from "@storybook/blocks"; // Importamos componentes de Storybook
-import Example from "./example.tsx"; // Importamos el componente Example
-import * as MyButton from "./mybutton.stories.tsx"; // Importamos las historias de MyButton
+import * as MyButtonStories from "./mybutton.stories.tsx"; // Importamos las historias de MyButton
 
-<Meta of={MyButton} title="MyButton" /> // Definimos los metadatos del componente MyButton para Storybook, incluyendo el título
+// Definimos los metadatos para MyButton
+<Meta of={MyButtonStories} title="MyButton" />
 
 # MyButton
-Es un componente de botón con diferentes especializaciones.
+Este componente es un botón con personalizaciones en color, tamaño, bordes, etc.
 
-#### Example
-<Canvas of={MyButton.Default} /> 
+#### Example - Default
+<Canvas of={MyButtonStories.Default} /> {/* Visualización del estado por defecto */}
+
 ## Uso
-```ts
-import { MyButton } from 'milibreria'; // Importamos el componente MyButton desde la librería externa 'milibreria'
+```tsx
+import { MyButton } from 'milibreria';
+
 function Example() {
   return (
     <MyButton
-      text="Hola" // Texto que aparecerá en el botón
-      txtcolor="white" // Color del texto del botón
-      bgcolor="blue" // Color de fondo del botón
-      borderColor="black" // Color del borde del botón
-      borderWidth="1px" // Grosor del borde del botón
-      size="medium" // Tamaño del botón (por ejemplo, mediano)
-      hoverTxtColor="yellow" // Color del texto cuando el ratón pasa sobre el botón (hover)
-      hoverBgColor="green" // Color de fondo cuando el ratón pasa sobre el botón (hover)
-      disabled={false} // Propiedad que indica si el botón está habilitado o deshabilitado (en este caso está habilitado)
-      onClick={() => alert("¡Hola!")} // Función que se ejecuta cuando se hace clic en el botón
+      text="Hola"
+      txtcolor="white"
+      bgcolor="blue"
+      borderColor="black"
+      borderWidth="1px"
+      size="medium"
+      hoverTxtColor="yellow"
+      hoverBgColor="green"
+      disabled={false}
+      onClick={() => alert("¡Hola!")}
     />
   );
 }
+
 

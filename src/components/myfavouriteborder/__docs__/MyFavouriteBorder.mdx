@@ -1,27 +1,30 @@
 import { Canvas, Meta } from "@storybook/blocks"; // Importamos componentes de Storybook
-import Example from "./example.tsx"; // Importamos el componente Example
-import * as MyFavouriteBorder from "./MyFavouriteBorder.stories"; // Importamos las historias de MyFavouriteBorder
+import * as MyFavouriteBorderStories from "./MyFavouriteBorder.stories"; // Importamos las historias de MyFavouriteBorder
 
-<Meta of={MyFavouriteBorder} title="MyFavouriteBorder" /> // Definimos los metadatos del componente MyFavouriteBorder para Storybook, incluyendo el título
+// Metadatos de MyFavouriteBorder
+<Meta of={MyFavouriteBorderStories} title="MyFavouriteBorder" />
 
 # MyFavouriteBorder
-// Descripción del componente: Es un botón de favorito con borde, que permite marcar elementos como favoritos.
+Componente que permite marcar elementos como favoritos con un borde.
 
-#### Example
-<Canvas of={MyFavouriteBorder.Default} /> {/* Muestra visualmente el ejemplo del botón por defecto en Storybook */}
+#### Example - Default
+<Canvas of={MyFavouriteBorderStories.Default} /> {/* Visualización del estado por defecto */}
+
+#### Example - Disabled
+<Canvas of={MyFavouriteBorderStories.Disabled} /> {/* Visualización del estado deshabilitado */}
 
 ## Uso
 ```tsx
-import { MyFavouriteBorder } from 'milibreria'; // Importamos el componente MyFavouriteBorder desde la librería externa 'milibreria'
+import { MyFavouriteBorder } from 'milibreria';
 
 function Example() {
   return (
     <MyFavouriteBorder
-      color="red" // Color del icono
-      disabled={false} // Indica si el botón está habilitado
-      onClick={() => alert("¡Botón de favorito clicado!")} // Función que se ejecuta al hacer clic
+      color="blue"
+      disabled={false}
+      onClick={() => alert("¡Botón de favorito clicado!")}
     />
   );
 }
 
-export default Example; // Exportamos el componente Example para su uso
+
