@@ -4,7 +4,7 @@ import MyFavouriteBorder from "../MyFavouriteBorder"; // Importamos el component
 
 // Definimos los metadatos para el componente MyFavouriteBorder en Storybook
 const meta: Meta<typeof MyFavouriteBorder> = {
-  title: "Components/MyFavouriteBorder", // Título que aparecerá en Storybook para organizar el componente
+  title: "MyFavouriteBorder", // Título que aparecerá en Storybook para organizar el componente
   component: MyFavouriteBorder, // Componente que se utilizará en las historias
 };
 

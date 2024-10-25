@@ -1,20 +1,20 @@
 // src/components/myfavourite/__docs__/MyFavourite.stories.tsx
 import type { Meta, StoryObj } from "@storybook/react"; // Importamos tipos para definir la metadata y las historias de Storybook
-import MyFavourite from "../MyFavourite"; // Importamos el componente MyFavourite desde su ubicación
+import Example from "./example"; // Importamos el componente MyFavourite desde su ubicación
 
 // Definimos los metadatos para el componente MyFavourite en Storybook
-const meta: Meta<typeof MyFavourite> = {
-  title: "Components/MyFavourite", // Título que aparecerá en Storybook, usado para agrupar las historias
-  component: MyFavourite, // Componente que se utilizará en las historias
+const meta: Meta<typeof Example> = {
+  title: "MyFavourite", // Título que aparecerá en Storybook, usado para agrupar las historias
+  component: Example, // Componente que se utilizará en las historias
 };
 
 export default meta; // Exportamos los metadatos para que Storybook los reconozca
 
 // Definimos el tipo de historia para las historias de MyFavourite
-type Story = StoryObj<typeof MyFavourite>; 
+type Story = StoryObj<typeof Example>; 
 
 // Definimos la historia 'Default', que representa el estado normal del componente
-export const Default: Story = {
+export const Primary: Story = {
   args: {
     color: "red", // Color por defecto del icono
     disabled: false, // Estado habilitado por defecto

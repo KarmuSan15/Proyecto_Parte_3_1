@@ -3,7 +3,7 @@ import ToruhDL from "../ToruhDL"; // Importa el componente ToruhDL
 
 // Define la metadata para el componente ToruhDL
 const meta: Meta<typeof ToruhDL> = {
-  title: "Components/ToruhDL", // Título que se mostrará en el panel de Storybook
+  title: "ToruhDL", // Título que se mostrará en el panel de Storybook
   component: ToruhDL, // Componente que se está documentando
 };
 
